@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // Bai1
+    // let new_arr = [];
+    // function delete_num (arr,num) {
+    //
+    //     for (let i=0 ; i<arr.length ;i++) {
+    //         if(arr[i]!==num) {
+    //             new_arr.push(arr[i]);
+    //         }
+    //     }
+    //     console.log(new_arr);
+    // }
+    // let a = [1,2,3,4,5,7];
+    // delete_num(a,7);
+
+    // Bai2
+    function danh_gia (score_TB) {
+        let countA=0;
+        let countB=0;
+        let countC=0;
+
+        for (let i=0; i<score_TB.length ;i++ ) {
+            if (score_TB[i]<=5 && score_TB[i]>=0) {
+                alert('diem'+score_TB[i]+'= Loai C');
+                countA++
+            }
+            if (score_TB[i]<=8 && score_TB[i]>5) {
+                alert('diem'+score_TB[i]+'= Loai B');
+                countB++;
+            }
+            if (score_TB[i]>8 && score_TB[i] <=10) {
+                alert('diem'+score_TB[i]+'= Loai A');
+                countC++;
+            }
+        }
+    }
+
+    function dem_loai_diem (score_TB) {
+        let countA = 0;
+        let countB = 0;
+        let countC = 0;
+
+        for (let i = 0; i < score_TB.length; i++) {
+            if (score_TB[i] <= 5 && score_TB[i] >= 0) {
+                countA++
+            }
+            if (score_TB[i] <= 8 && score_TB[i] > 5) {
+                countB++;
+            }
+            if (score_TB[i] > 8 && score_TB[i] <= 10) {
+                countC++;
+            }
+        }
+        alert('so ban diem loai A ='+countA);
+        alert('so ban diem loai B ='+countB);
+        alert('so ban diem loai C ='+countC);
+    }
+
+
+    function tinh_diem_tb (score) {
+        let sum =0;
+        for (let i = 0; i < score.length; i++) {
+            sum= sum + score[i];
+        }
+        let dtb = sum/(score.length);
+        alert("diem trung binh cua tat ca la:"+dtb);
+    }
+
+
+    let a = [1,2,3,3,6,4,2,4,5,6,7,9,8];
+    danh_gia(a);
+    dem_loai_diem(a);
+    tinh_diem_tb(a);
+</script>
+</body>
+</html>
