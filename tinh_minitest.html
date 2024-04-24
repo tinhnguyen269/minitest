@@ -7,9 +7,8 @@
 <body>
 <script>
     // Bai1
-    let new_arr = [];
     function delete_num (arr,num) {
-
+        let new_arr = [];
         for (let i=0 ; i<arr.length ;i++) {
             if(arr[i]!==num) {
                 new_arr.push(arr[i]);
@@ -18,8 +17,8 @@
         return(new_arr);
     }
     let a = [1,2,3,4,5,7];
-    delete_num(a,5);
-    console.log(new_arr);
+    let b = delete_num(a,5)
+    console.log(b);
 
 
 
@@ -27,13 +26,13 @@
     // function rate_score (score_TB) {
     //     for (let i=0; i<score_TB.length ;i++ ) {
     //         if (score_TB[i]<=5 && score_TB[i]>=0) {
-    //             alert('diem'+score_TB[i]+'= Loai C');
+    //             return('diem'+score_TB[i]+'= Loai C');
     //         }
     //         if (score_TB[i]<=8 && score_TB[i]>5) {
-    //             alert('diem'+score_TB[i]+'= Loai B');
+    //             return('diem'+score_TB[i]+'= Loai B');
     //         }
     //         if (score_TB[i]>8 && score_TB[i] <=10) {
-    //             alert('diem'+score_TB[i]+'= Loai A');
+    //             return('diem'+score_TB[i]+'= Loai A');
     //         }
     //     }
     // }
@@ -66,7 +65,7 @@
     //         sum= sum + score[i];
     //     }
     //     let dtb = sum/(score.length);
-    //     alert("diem trung binh cua tat ca la:"+dtb);
+    //     return("diem trung binh cua tat ca la:"+dtb);
     // }
     //
     //
