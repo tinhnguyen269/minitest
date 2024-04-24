@@ -7,72 +7,75 @@
 <body>
 <script>
     // Bai1
-    function delete_num (arr,num) {
-        let new_arr = [];
-        for (let i=0 ; i<arr.length ;i++) {
-            if(arr[i]!==num) {
-                new_arr.push(arr[i]);
-            }
-        }
-        return(new_arr);
-    }
-    let a = [1,2,3,4,5,7];
-    let b = delete_num(a,5)
-    console.log(b);
+    // function delete_num (arr,num) {
+    //     let new_arr = [];
+    //     for (let i=0 ; i<arr.length ;i++) {
+    //         if(arr[i]!==num) {
+    //             new_arr.push(arr[i]);
+    //         }
+    //     }
+    //     return(new_arr);
+    // }
+    // let a = [1,2,3,4,5,7];
+    // let b = delete_num(a,5)
+    // console.log(b);
 
 
 
     // Bai2
-    // function rate_score (score_TB) {
-    //     for (let i=0; i<score_TB.length ;i++ ) {
-    //         if (score_TB[i]<=5 && score_TB[i]>=0) {
-    //             return('diem'+score_TB[i]+'= Loai C');
-    //         }
-    //         if (score_TB[i]<=8 && score_TB[i]>5) {
-    //             return('diem'+score_TB[i]+'= Loai B');
-    //         }
-    //         if (score_TB[i]>8 && score_TB[i] <=10) {
-    //             return('diem'+score_TB[i]+'= Loai A');
-    //         }
-    //     }
-    // }
-    //
-    // function count_score (score_TB) {
-    //     let countA = 0;
-    //     let countB = 0;
-    //     let countC = 0;
-    //
-    //     for (let i = 0; i < score_TB.length; i++) {
-    //         if (score_TB[i] <= 5 && score_TB[i] >= 0) {
-    //             countA++
-    //         }
-    //         if (score_TB[i] <= 8 && score_TB[i] > 5) {
-    //             countB++;
-    //         }
-    //         if (score_TB[i] > 8 && score_TB[i] <= 10) {
-    //             countC++;
-    //         }
-    //     }
-    //     alert('so ban diem loai A ='+countA);
-    //     alert('so ban diem loai B ='+countB);
-    //     alert('so ban diem loai C ='+countC);
-    // }
-    //
-    //
-    // function medium_score (score) {
-    //     let sum =0;
-    //     for (let i = 0; i < score.length; i++) {
-    //         sum= sum + score[i];
-    //     }
-    //     let dtb = sum/(score.length);
-    //     return("diem trung binh cua tat ca la:"+dtb);
-    // }
-    //
-    //
-    // let a = [1,2,3,3,6,4,2,4,5,6,7,9,8];
-    // rate_score(a);
-    // count_score(a);
-    // medium_score(a);
+    function rate_score (score_TB) {
+
+        // for (let i=0; i<score_TB.length ;i++ ) {
+            if (score_TB<=5 && score_TB>=0) {
+                return"C";
+            }
+            else if (score_TB<=8 && score_TB>5) {
+                return"B";
+            }
+            else if (score_TB>8 && score_TB <=10) {
+                return"A";
+            }
+
+    }
+
+    function count_score (score_TB) {
+        let countA = 0;
+        let countB = 0;
+        let countC = 0;
+
+        for (let i = 0; i < score_TB.length; i++) {
+            if (rate_score(score_TB[i])==="A") {
+                countA++
+            }
+            if (rate_score(score_TB[i])==="B") {
+                countB++;
+            }
+            if (rate_score(score_TB[i])==="C") {
+                countC++;
+            }
+        }
+
+        alert('so ban diem loai A ='+ countA);
+        alert('so ban diem loai B ='+ countB);
+        alert('so ban diem loai C ='+ countC);
+    }
+
+
+    function medium_score (score) {
+        let sum =0;
+        for (let i = 0; i < score.length; i++) {
+            sum= sum + score[i];
+        }
+        let dtb = sum/(score.length);
+        return(dtb);
+    }
+
+
+    let a = [1,2,3,3,6,4,2,4,5,6,7,9,8];
+    rate_score(a);
+    count_score(a);
+    medium_score(a);
+
 </script>
 </body>
 </html>
